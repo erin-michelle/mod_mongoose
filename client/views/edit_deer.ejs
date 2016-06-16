@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Mongoose Dashboard</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<form action="/deer/<%= deer._id %>" method="post">
+		<div>
+			<label for="">Deer Name: </label>
+			<input type="text" name="name" id="" value="<%= deer.name %>">
+		</div>
+		<div>
+			<label for="">Deer Weight: </label>
+			<input type="text" name="weight" id="" value="<%= deer.weight %>">
+		</div>
+		<div>
+			<label for="">Deer Color: </label>
+			<input type="text" name="color" id="" value="<%= deer.color %>">
+		</div>
+		<input type="submit" value="Edit Deer">
+	</form>
+</body>
+</html>

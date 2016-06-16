@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Mongoose Dashboard</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<h1>Deer Dashboard</h1>
+	 <% for (var x in deer) { %>
+        <ul>
+          <li><a href="/deer/<%= deer[x]._id %>">Name: <%= deer[x].name %></a></li>
+          <li>Weight: <%= deer[x].weight %></li>
+          <li>Color: <%= deer[x].color %></li>
+        </ul>
+           
+       <form action="/deer/<%= deer[x]._id %>/delete" method="post">
+       		<input type="submit" value="Delete">
+       </form>
+        <hr>
+ 	 <% } %>
+	<button><a href="/deer/new">Add new Deer!</a></button>
+</body>
+</html>
